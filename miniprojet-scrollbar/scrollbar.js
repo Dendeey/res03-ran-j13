@@ -73,13 +73,11 @@ for(let i = 0; i < sections.length; i++){
         {
             let NextPos = GetNextPos(sections[i]).getBoundingClientRect().top;
             scroll(0, NextPos + currentScrollPosition);
-            console.log(scroll);
         }
-        else if(event.deltaY < 0 && GetPrevPos(sections[i] != undefined)) // je vais vers le haut
+        else if(event.deltaY < 0 && GetPrevPos(sections[i]) != undefined) // je vais vers le haut
         {
             let PrevPos = GetPrevPos(sections[i]).getBoundingClientRect().top;
             scroll(0, PrevPos + currentScrollPosition);
-            console.log(scroll);
         }
     });
 }
